@@ -38,5 +38,8 @@ public class VarEx02 {
 		int i3 = (int)f2;
 		System.out.println("강제캐스팅4 실수 -> 정수 : " + f2 + " -> " + i3);
 		
+		// 5. 2의 보수 : CPU가 보는 음수값
+		int x = -10;
+		System.out.println(x + " -> " + Integer.toBinaryString(x)); // int라서 32비트 -> 32자리로 앞에는 다 1로 채워준거
 	}
 }
