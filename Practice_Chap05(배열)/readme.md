@@ -24,6 +24,9 @@
   int[][] arr = new int[5][5]; 
   ```
   * arr도 주소값(stack 영역), arr[i]도 주소값이다!(heap영역) => arr[i]는 각 행의 첫번째, 즉 arr[i][0]의 주소값을 가지는 것
+  
+    ![image](https://user-images.githubusercontent.com/102529294/165930827-b893bd39-050c-4ed7-a013-bbef647e6c42.png)
+
 
 ## 배열 복사
   1. for 문 사용
