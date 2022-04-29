@@ -32,3 +32,12 @@
   1. for 문 사용
   2. System.arraycopy() : 빠름
   3. Arrays 클래스(배열을 다루는 util 클래스)의 copyof(), copyofRange()
+
+## 배열 for
+  ``` 
+  int vals[] = new int[5];
+  for (int val : vals)
+  {
+      System.out.print(" " + i);
+  }
+  ```
