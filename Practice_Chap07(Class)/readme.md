@@ -30,6 +30,8 @@
   * 지역 변수
     - 메서드가 호출될 때 생성, 메서드 종료 시 소멸. 초기화가 반드시 필요함.
 
+### Static Method에서 instance 멤버변수, instance method 사용할 수 없는 이유?
+  -> static 메서드는 메모리의 static 영역에 올라가있고 인스턴스 생성없이 접근이 가능하지만 instance 멤버변수나 메서드는 new로 인스턴스가 생성된 이후에만 사용이가능하므로(instance method에서는 static 메서드 호출 가능하지)
 
 ## 매개변수
   * 기본형 매개변수 (call by value)
