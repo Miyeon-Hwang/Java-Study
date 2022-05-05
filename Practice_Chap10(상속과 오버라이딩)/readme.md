@@ -30,10 +30,6 @@
     - class chapter 참고
   * 기타 제어자
     - static, final, abstract, synchronized(스레드할때 공부) 등
-
-# 다형성 (Polymorphism) @ 중요!!!
-  ### 여러가지 형태를 취하는 성질. 하나의 참조변수로 여러 타입의 객체를 참조하는 것
-  ### => 조상 타입의 참조변수로 자손 타입의 객체를 참조할 수 있다!!!!
   
   
   
