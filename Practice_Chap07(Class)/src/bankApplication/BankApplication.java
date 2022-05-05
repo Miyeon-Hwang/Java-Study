@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BankApplication {
 	
 	private static Scanner sc = new Scanner(System.in);
-	private static Account[] accountArray = new Account[100];
+	private static Account[] accountArray = new Account[100]; // 여기서는 stack에 accountArray 변수 메모리 할당, heap에 100개의 Account 객체의 주소를 각각 저장할 공간이 할당되는 것. Account 객체는 아직 attach 되지 않은 상태
 	private static int accNum = 0;
 	
 	public static void main(String[] args) {
@@ -55,7 +55,7 @@ public class BankApplication {
 		int balance = sc.nextInt();
 		
 		Account acc = new Account(ano, owner, balance);
-		accountArray[accNum++] = acc;
+		accountArray[accNum++] = acc; // accountArray 변수 선언할 때 heap에 할당해놓은 메모리 공간에 생성한 Account 객체를 실제로 연결해주는 것!
 		
 		System.out.println("계좌생성을 완료했습니다. 계좌번호 : " + acc.getAno() + ", 계좌주 : " + acc.getOwner() + ", 잔액 : " + acc.getBalance());
 	}
@@ -105,7 +105,6 @@ public class BankApplication {
 			else {
 				System.out.println("잔액이 부족합니다. 출금에 실패했습니다.");
 			}
-			
 		}
 	}
 
