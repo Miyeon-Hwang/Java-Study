@@ -23,7 +23,7 @@
      - new 연산자로 Time 객체를 생성하고 그 주소를 연결해주는 것.
 
 # 접근 한정자
-  * private, protected(같은 package or 다른 package의 자식 클래스만 접근가능), default(package 내, 작성 안하면 default), public
+  * private, protected(같은 package or 다른 package는 자식 클래스 내에서만 접근가능), default(같은 package만 접근 가능, 작성 안하면 default), public
 
 # 변수의 범위
   * static 멤버변수(class 변수)
