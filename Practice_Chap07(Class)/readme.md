@@ -5,7 +5,6 @@
 # Class 메모리 구조
   * new 연산자로 생성하면 heap에 클래스 멤버들의 바이트 크기의 합만큼 메모리를 할당하고 자료형에 맞게 자동으로 초기화 해줌.
   * Instance 별로 연속적인 메모리를 가지게 됨
-  * Class 배열의 메모리 구조는 2차원 배열과 유사함
 ```
  Class Time {
   int hour;
@@ -16,6 +15,12 @@
  Time t = new Time(); 
  ```
  ![image](https://user-images.githubusercontent.com/102529294/166187878-6f875ade-4279-4ded-bdde-cea64c46dc7f.png)
+   * Class 배열의 메모리 구조는 2차원 배열과 유사함
+     ```
+     Time[] times = new Time[10];
+     ```
+     - 위 코드에서는 stack 영역에 times 변수 메모리(주소저장) 할당, heap 영역에 10개의 Time 객체의 주소를 각각 저장할 배열(4byte * 10) 메모리 공간 할당만 됨.
+     - new 연산자로 Time 객체를 생성하고 그 주소를 연결해주는 것.
 
 # 접근 한정자
   * private, protected(package내 자식class), default(package 내, 작성 안하면 default), public
