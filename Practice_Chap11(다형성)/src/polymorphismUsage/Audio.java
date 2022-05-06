@@ -1,14 +1,14 @@
 package polymorphismUsage;
 
-public class Audio extends Product{
+public class Audio {
 	
-	public Audio() {
-		super(80);
-	}
-	
-	@Override
-	public String toString() {
-		return "Audio";
-	}
+//	public Audio() {
+//		super(80);
+//	}
+//	
+//	@Override
+//	public String toString() {
+//		return "Audio";
+//	}
 
 }
