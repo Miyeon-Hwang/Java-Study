@@ -27,14 +27,14 @@
   ```
 ## Vector Class
   * Collection framework의 List 계열 (Vector 외에도 ArrayList, LinkedList, Stack 등이 있음)
-  * 모든 종류의 객체를 저장할 수 있음
+  * 모든 종류의 객체를 저장할 수 있음. 동적이다(사이즈가 변함)
   ```
   Vector vector = new Vector() // 기본적으로는 10개의 객체를 저장할 수 있는 Vector 인스턴스가 생성되고 그 이상을 추가하면 자동으로 크기가 증가한다.
                                // 자세히는 사이즈 증가된 배열을 복사 생성해서 그 배열을 참조하도록 하는 것(자세한건 추후에 Collection 공부할때 설명)
   Object o = new Object()                             
   vector.add(o) // add()로 추가
   Object o = vector.get(0) // get(int index)로 객체 get
-  vector.remove(o) // remove()로 삭제
+  vector.remove(1) // remove() index로 삭제
   if (vector.isEmpty()) {} 
   int size = vector.size()
   ```
