@@ -7,6 +7,7 @@ public class PolyArgsEx {
 		buyer.info();
 		// 1. 매개변수의 다형성 적용
 		// buy()의 매개변수가 조상클래스인 Product이므로 그 자손클래스를 다 넘길 수 있음.
+		// return 객체에도 동일하게 적용
 		buyer.buy(new TV());
 		buyer.info();
 		

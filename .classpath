@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Practice_Chap02(변수)/src"/>
+	<classpathentry kind="src" path="Practice_Chap03(연산자)/src"/>
+	<classpathentry kind="src" path="Practice_Chap06(배열)/src"/>
+	<classpathentry kind="src" path="Practice_Chap07(Class)/src"/>
+	<classpathentry kind="src" path="Practice_Chap10(상속과 오버라이딩)/src"/>
+	<classpathentry kind="src" path="Practice_Chap11(다형성)/src"/>
+	<classpathentry kind="output" path="Practice_Chap02(변수)/bin"/>
+</classpath>
