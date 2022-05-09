@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="Practice_Chap02(변수)/src"/>
 	<classpathentry kind="src" path="Practice_Chap03(연산자)/src"/>
 	<classpathentry kind="src" path="Practice_Chap06(배열)/src"/>
