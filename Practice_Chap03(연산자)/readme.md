@@ -6,7 +6,6 @@
   2. 정수형, 실수형 연산 시에는 표현 범위가 넓은 쪽으로 형변환 
       * (ex) byte + float => float + float = float / int + double => double + double = double
 
-### 비트 연산자, shift 연산자 (이참에 제대로 공부해두자)
-  1. 비트 연산자 : &, |, ^  (특히 ^ 는 배타적 논리합(exclusive or)로 서로 다르면 1 return)
-  2. shift 연산자 : <<(left shift, 2^n 곱), >>(right shift, 2^n 나누기)
+### 비트 연산자, shift 연산자
+  -> 실습 참고
     
