@@ -9,13 +9,6 @@
   * StringBuffer는 멀티 스레드 환경, StringBuilder는 싱글 스레드 환경에서 사용
 
 
-## wrapper(포장) 클래스
-  * 8가지 기본타입의 값을 객체로 포장하는 클래스 => collection framework에서 사용하기 위한 용도
-  * Boxing(기본형 -> 포장객체), Unboxing(포장객체 -> 기본형 타입 값) => 기본형에 대해서는 컴파일 시 자동으로 박싱, 언박싱 됨
-  * parse + "타입명" 정적함수로 문자열을 해당 타입으로 파싱할 수 있음
-  * (ex) Byte.parseByte("10") / Boolean.parseBoolean("true")
-
-
 ## Objects 클래스
   * Object 클래스를 위한 util 클래스(jdk 1.7부터)
   * 모두 정적메서드로 구성
@@ -32,3 +25,27 @@
   * Pattern 클래스는 정규표현식으로 문자열을 검증할 때 사용.
   * (ex) Pattern.matches(regExp, str)
 
+
+## wrapper(포장) 클래스
+  * 8가지 기본타입의 값을 객체로 포장하는 클래스 => collection framework에서 사용하기 위한 용도
+  * Boxing(기본형 -> 포장객체), Unboxing(포장객체 -> 기본형 타입 값) => 기본형에 대해서는 컴파일 시 자동으로 박싱, 언박싱 됨
+  * parse + "타입명" 정적함수로 문자열을 해당 타입으로 파싱할 수 있음
+  * (ex) Byte.parseByte("10") / Boolean.parseBoolean("true")
+
+
+## System 클래스
+  * 프로그램 종료, 입출력, 메모리정리(GC), 시스템속성 읽기, 환경변수 읽기 등
+  * System.exit() : 강제적으로 JVM을 종료하고자 할때 사용
+  * System.gc() : JVM에게 가능한 빨리 GC를 실행해달라고 요청
+  * System.currentTimeMillis(), System.nanoTime() : 프로그램 성능 테스트 용도로 사용
+  * System.getProperty() : JVM이 시작할 때 자동으로 설정되는 시스템 속성 값을 가져옴. key-value로 받아옴 (ex) System.getProperty("os.name")
+
+
+## Class 클래스
+  * 클래스와 인터페이스의 메타데이터(클래스 이름, 생성자 정보, 필드/메서드 정보 등) 관리
+  * 문자열로 된 클래스명으로부터 동적 객체 생성하는 클래스
+  * Object.getClass() : 객체로부터 클래스를 얻을 때
+  * Class.forName("java.lang.String") : 문자열로부터 클래스를 얻을 때
+  * 동적 객체 생성 : 프로그램 실행 중에 클래스를 결정하는 것. Class.newInstance() 사용
+  ### 리플렉션!!!
+    * 클래스의 생성자, 필드, 메서드 정보 알아내는 것 => 실습 참고
