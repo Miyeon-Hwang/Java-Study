@@ -28,6 +28,14 @@ public class BoxingUnboxingEx {
 		
 		
 		
+		Class c = int.class;
+		System.out.println(c.getName());
+		
+		System.out.println(int.class.isPrimitive());
+		System.out.println(Integer.class.isPrimitive());
+		
+		
+		
 		
 	}
 }
