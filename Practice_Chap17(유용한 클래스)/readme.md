@@ -26,6 +26,23 @@
   * (ex) Pattern.matches(regExp, str)
 
 
+## Format 클래스
+  * DecimalFormat 클래스(숫자형식) : 0은 자리수(값이 없어도 0을 표시), #도 자리수지만 빈 값은 표시하지 않음
+  * SimpleDataFormat 클래스(날짜형식) -> 실습 참고
+
+
+## StringTokenizer 클래스
+  * String.split()과 유사하지만 제시한 구분자 사이에 데이터가 없으면 공백을 리턴
+  * StringTokenizer는 구분자 사이에 데이터가 없으면 무시. 다음 단어 리턴
+  * countTokens(), hasMoreTokens(), nextToken() 등의 메소드가 있음
+  * 속도면에서 빠름
+
+
+## 날짜 관련 클래스
+  * Date 클래스 : TimeStamp 용도로 많이 사용
+  * Calendar 클래스 : 달력을 표현한 추상클래스. 싱글톤 객체를 받아와서 사용함 => Calendar.getInstance()
+
+
 ## wrapper(포장) 클래스
   * 8가지 기본타입의 값을 객체로 포장하는 클래스 => collection framework에서 사용하기 위한 용도
   * Boxing(기본형 -> 포장객체), Unboxing(포장객체 -> 기본형 타입 값) => 기본형에 대해서는 컴파일 시 자동으로 박싱, 언박싱 됨
@@ -38,7 +55,8 @@
   * System.exit() : 강제적으로 JVM을 종료하고자 할때 사용
   * System.gc() : JVM에게 가능한 빨리 GC를 실행해달라고 요청
   * System.currentTimeMillis(), System.nanoTime() : 프로그램 성능 테스트 용도로 사용
-  * System.getProperty() : JVM이 시작할 때 자동으로 설정되는 시스템 속성 값을 가져옴. key-value로 받아옴 (ex) System.getProperty("os.name")
+  * System.getProperty() : JVM이 시작할 때 자동으로 설정되는 시스템 속성 값을 가져옴. key-value로 받아옴
+    * (ex) System.getProperty("os.name")
 
 
 ## Class 클래스
@@ -47,5 +65,5 @@
   * Object.getClass() : 객체로부터 클래스를 얻을 때
   * Class.forName("java.lang.String") : 문자열로부터 클래스를 얻을 때
   * 동적 객체 생성 : 프로그램 실행 중에 클래스를 결정하는 것. Class.newInstance() 사용
-  ### 리플렉션!!!
-    * 클래스의 생성자, 필드, 메서드 정보 알아내는 것 => 실습 참고
+    ### 리플렉션!!!
+      * 클래스의 생성자, 필드, 메서드 정보 알아내는 것 => 실습 참고
