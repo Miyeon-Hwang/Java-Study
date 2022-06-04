@@ -17,7 +17,8 @@
 
 ## Arrays 클래스
   * 배열을 조작하기 위한 util 클래스, 모두 정적메서드로 구성
-  * binarySearch, copyOf, copyOfRange, deepEquals, fill, sort 등
+  * binarySearch, copyOf, copyOfRange, deepEquals, fill, sort, binarySearch 등
+  * sort()를 하려면 클래스가 Comparable 인터페이스를 구현하여 compareTo()를 오버라이딩 해줘야 함.
 
 
 ## 정규표현식 / Pattern 클래스
