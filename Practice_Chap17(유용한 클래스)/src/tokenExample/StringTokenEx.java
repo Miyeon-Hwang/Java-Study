@@ -6,11 +6,11 @@ public class StringTokenEx {
 	
 	public static void main(String[] args) {
 		
-		String str = "baby    cat dog";
+		String str = "baby  cat dog";
 		
 		String[] res1 = str.split(" ");
 		for (String s : res1) {
-			System.out.println(s);  // 공백 다 출력
+			System.out.println(s);  // 공백도 split의 리턴값으로 인식
 		}
 		
 		System.out.println("=========================");
