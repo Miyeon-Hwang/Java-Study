@@ -16,5 +16,27 @@
   
 ## Generic 메서드
   * 매개변수나 리턴 타입으로 타입 파라미터를 갖는 메서드
-
-  
+  * 상속, 구현 관계를 이용하여 타입 파라미터를 제한할 수 있음.
+  * 사용 : <T extends(or super) 클래스 or 인터페이스명>
+  ```
+  public static<T> Student<T> changing(T t) {}
+ 
+  // extends => Number 클래스나 그 자손클래스만 T 타입으로 받겠다.
+  // method 내에서 타입 파라미터를 변수로 사용할 때는 Number클래스의 멤버에만 접근할 수 있고 호출될때는 자손클래스에 오버라이딩된 메소드가 호출됨. => 다형성 원칙 동일하게 적용
+  public static<T extends Number> Student<T> changing(T t) {}
+ 
+  // super => C 클래스나 그 상위클래스만 T 타입으로 받겠다.
+  public static<T super C> Student<T> changing(T t) {}
+  ```
+ 
+## 와일드 카드 타입
+  * 이미 선언되어 있는 generic 타입을 매개변수나 리턴 타입으로 사용할 때, 타입 파라미터를 제한할 목적으로 사용.
+  ```
+  // 제한 없음
+  public static void registerCourse(Course<?> course) {}
+  // 해당 클래스 또는 그 자손클래스만 허용
+  public static void registerCourse(Course<? extends Student> course) {}
+ // 해당 클래스 또는 그 상위클래스만 허용
+ public static void registerCourse(Course<? super Student> course) {}
+  ```
+  ### @ 와일드 카드 타입은 이미 선언이 되어있는 제네릭 타입을 매개변수, 리턴 타입으로 사용할 때, 타입 파라미터를 제한할 때 사용. <T extends(or super) A>는 제네릭 타입 및 메서드 선언 시 타입 파라미터 제한에 사용
