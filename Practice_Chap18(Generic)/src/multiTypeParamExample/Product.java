@@ -1,0 +1,21 @@
+package multiTypeParamExample;
+
+// 멀티 타입 파라미터 제네릭 타입
+public class Product<T, M> {
+	
+	private T t;
+	private M m;
+	
+	public T getT() {
+		return t;
+	}
+	public void setT(T t) {
+		this.t = t;
+	}
+	public M getM() {
+		return m;
+	}
+	public void setM(M m) {
+		this.m = m;
+	}
+}
