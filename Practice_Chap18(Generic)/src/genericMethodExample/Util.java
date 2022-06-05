@@ -18,6 +18,7 @@ public class Util {
 	
 	// 타입 파라미터의 제한!
 	// 매개변수 T 타입을 Number 클래스나 그 자손 클래스로만 받겠다
+	// 와일드 카드랑 달리 super는 없음.
 	public static<T extends Number> int compare(T t1, T t2) {
 		double val1 = t1.doubleValue(); // 추상클래스인 Number 클래스의 자손클래스에서 오버라이딩 된 doubleValue() 메서드가 호출됨.
 		double val2 = t2.doubleValue();
