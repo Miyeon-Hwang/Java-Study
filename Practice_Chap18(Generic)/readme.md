@@ -22,7 +22,8 @@
   public static<T> Student<T> changing(T t) {}
  
   // extends => Number 클래스나 그 자손클래스만 T 타입으로 받겠다.
-  // method 내에서 타입 파라미터를 변수로 사용할 때는 Number클래스의 멤버에만 접근할 수 있고 호출될때는 자손클래스에 오버라이딩된 메소드가 호출됨. => 다형성 원칙 동일하게 적용
+  // method 내에서 타입 파라미터를 변수로 사용할 때는 Number클래스의 멤버에만 접근할 수 있고 
+  // 호출될때는 자손클래스에 오버라이딩된 메소드가 호출됨. => 다형성 원칙 동일하게 적용
   public static<T extends Number> Student<T> changing(T t) {}
   ```
  
@@ -38,3 +39,6 @@
  public static void registerCourse(Course<? super Student> course) {}
   ```
   ### @ 와일드 카드 타입은 이미 선언이 되어있는 제네릭 타입을 매개변수, 리턴 타입으로 사용할 때, 타입 파라미터를 제한할 때 사용. <T extends(or super) A>는 제네릭 타입 및 메서드 선언 시 타입 파라미터 제한에 사용
+
+## Generic 타입의 상속
+  * Generic 타입 클래스나 인터페이스를 상속, 구현하는 클래스도 generic 타입이며 부모의 타입 파라미터를 가진다.
