@@ -50,7 +50,7 @@
 ## 공유객체
   * 멀티 스레드가 하나의 객체를 공유하는 것
   * CPU 스케줄링에 따라, 스레드 간에 공유객체에 임의로 접근하게 되면서 값을 변경할 수 있으므로 데이터의 신뢰성이 없어짐. 원하는 결과를 얻지 못할 수 있음.
-    ![image](https://user-images.githubusercontent.com/102529294/172100001-9c83a824-34de-4eb0-94ea-9fc845df70b6.png)
+  * ![image](https://user-images.githubusercontent.com/102529294/172100001-9c83a824-34de-4eb0-94ea-9fc845df70b6.png)
     
   ### => 동기화를 통해 해결!
 
@@ -63,11 +63,11 @@
   * synchronized 키워드
     - 메서드나 블록이 하나의 스레드만 실행하도록 함. 공유자원에 lock을 걸어줌
     - 다른 스레드는 해당 메서드나 블록이 끝날 때까지 대기함
-  ![image](https://user-images.githubusercontent.com/102529294/172100127-cbea7c87-4f96-4178-93da-dcdd0acc8a30.png)
+  * ![image](https://user-images.githubusercontent.com/102529294/172100127-cbea7c87-4f96-4178-93da-dcdd0acc8a30.png)
   
 ## Thread Status
   * 일반적으로, 스레드 생성 후 start()가 호출되면 실행대기(Runnable) 상태가 되고 스케줄러에 따라 실행과 실행대기상태를 반복하다가 run() 종료와 함께 스레드 종료.
-  * 한 번 실행되어 종료된 스레드는 재사용 할 수 없음.
+  * 한 번 실행되어 종료된 스레드는 재사용 할 수 없음.(이미 TERMINATED 상태가 되었기때문)
   * Status 구분
     - 객체 생성(NEW) : 스레드 객체 생성. start() 전
     - 실행 대기(RUNNABLE) : start()호출 시에 변경되는 상태. 실행 상태로 언제든 갈 수 있는 상태
@@ -76,4 +76,16 @@
       - WAITING : 다른 스레드가 통지할 때까지 무한정으로 기다리는 상태(Object.wait(), notify(), notifyAll())
       - TIMED_WAITING : Thread.sleep() 주어진 시간동안 기다리는 상태
     - 종료(TERMINATED) : 실행을 마친 상태
+
+## 스레드 상태 제어
+  * Thread.sleep() : milli seconde 단위, 1/1000초
+  * Thread.yield() : 다른 스레드에게 실행 양보(무의미한 반복을 수행하는 스레드의 경우 등)
+  * join() : 다른 스레드의 종료를 기다림. 스레드에서 A 스레드를 실행시키고 자신은 TIMED_WAITING 상태가 되고 A 스레드 실행이 끝나면 RUNNABLE 상태가됨.
+  * wait(), notify(), notifyAll()
+    - 스레드간 협업을 목적. 공유객체 사용 -> 동기화를 위해 (ex) 두 개의 스레드가 교대로 번갈아 가며 실행해야 하는 경우
+    - 동기화 메서드 또는 블록에서만 호출 가능한 Object의 메서드
+    - wait() : 호출한 스레드는 BLOCKED 상태가 됨. 다른 스레드가 notify(), notifyAll()을 호출해야 RUNNABLE 상태가 됨.
+  * interrupt()
+    - 일시 정지 상태에서 interrupt()가 호출되면 InterruptedException이 발생되며 스레드가 사용한 자원을 정리할 시간을 주고 빠져나오게 된다.
+    - 실행대기 or 실행 상태에서는 InterruptedException이 발생하지 않음!! => interrupted boolean 값을 리턴하는 정적 메서드Thread.interrupted() or 인스턴스메서드 objThread.isinterrupted()를 사용하여 Interrupt() 호출 여부를 확인하고 빠져나오도록 구현
 
