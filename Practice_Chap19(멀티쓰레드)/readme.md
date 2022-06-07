@@ -65,10 +65,10 @@
     - 다른 스레드는 해당 메서드나 블록이 끝날 때까지 대기함
   * ![image](https://user-images.githubusercontent.com/102529294/172100127-cbea7c87-4f96-4178-93da-dcdd0acc8a30.png)
   
-## Thread Status
+## Thread State
   * 일반적으로, 스레드 생성 후 start()가 호출되면 실행대기(Runnable) 상태가 되고 스케줄러에 따라 실행과 실행대기상태를 반복하다가 run() 종료와 함께 스레드 종료.
   * 한 번 실행되어 종료된 스레드는 재사용 할 수 없음.(이미 TERMINATED 상태가 되었기때문)
-  * Status 구분
+  * State 구분
     - 객체 생성(NEW) : 스레드 객체 생성. start() 전
     - 실행 대기(RUNNABLE) : start()호출 시에 변경되는 상태. 실행 상태로 언제든 갈 수 있는 상태
     - 일시 정지
