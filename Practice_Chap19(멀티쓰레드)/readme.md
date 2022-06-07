@@ -148,9 +148,9 @@
     - ExecutorService의 작업 큐에 Runnable / Callable 객체를 넣음
     - execute(Runnable command) : Runnable을 작업 큐에 저장. 작업 처리 결과를 받지 못함
       - 예외 발생 시 : 스레드 즉시 종료 후 풀에서 제거.
-    - submit(Runnable or Callable<V> task) : Runnable, Callable 둘 다 사용 가능. Future 객체 리턴
+    - submit(Runnable or Callable<V> task) : Runnable, Callable 둘 다 사용 가능. Future 객체(지연완료 객체) 리턴(블로킹 방식으로 작업완료 통보 받음)
+      - submit(Runnable task, V result) 오버로딩 메서드도 있음. 리턴값이 없는 Runnable 작업에서 결과를 외부 객체 result에 저장해줌.
       - 예외 발생 시 : 스레드 종료되지 않고 다음 작업에 재사용 => submit 사용이 나음. 스레드 다시 생성하기 위한 CPU, 메모리 작업이 필요 없기 때문
 
-
-
-
+    ### Future 객체 : 지연완료 객체. submit()을 호출하면 즉시 Future 객체가 리턴되나 결과값은 없음. 작업의 결과가 나올때까지 기다렸다가 get()으로 결과값을 확인.
+    ### 블로킹 : 스레드 작업 완료를 위해 기다리는 것
