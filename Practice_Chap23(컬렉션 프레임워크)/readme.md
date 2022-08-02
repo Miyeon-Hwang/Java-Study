@@ -27,7 +27,7 @@
     * 순차적인 데이터 추가, 제거에서는 배열복사가 일어나지 않으므로 빠름! (끝부터 추가, 삭제)
     
   ### Vector<E>
-  * ArrayList와 동일한 특성(배열 기반). ArrayList의 구버전 느낌
+  * ArrayList와 동일한 특성(배열 기반). ArrayList의 구버전
   * 기본적으로 스레드 동기화가 되어있음 -> 멀티 스레드 환경에서 vector에 동시에 접근해도 thread-safe함
   
   ### LinkedList<E>
@@ -77,7 +77,7 @@
 ---
 ## Map
 - key-value 쌍(엔트리)으로 관리, 순서 없음, key 중복 안됨
-- HashMap, Hashtable, TreeMap 등
+- 구현 클래스 : HashMap, Hashtable, TreeMap 등
 - 엄밀히 Map은 컬렉션이 아님(Collection Interface를 구현하지 않음)! 아래는 공식문서 내용
   > Why doesn't Map extend Collection?
   
@@ -86,4 +86,7 @@
   >  Collection could be made to extend Map, but this raises the question: what are the keys? There's no really satisfactory answer, and forcing one leads to an unnatural interface. </br>
   >  Maps can be viewed as Collections (of keys, values, or pairs), and this fact is reflected in the three "Collection view operations" on Maps (keySet, entrySet, and values). While it is, in principle, possible to view a List as a Map mapping indices to elements, this has the nasty property that deleting an element from the List changes the Key associated with every element before the deleted element. That's why we don't have a map view operation on Lists.
 
+#### @ HashMap<K,V>, Hashtable<K,V> 차이?
+* Hashtable 은 컬렉션 프레임워크 이전에 존재하던 클래스. 현재는 호환을 위해 남아있는 정도. HashMap 사용 권장 (Vector, ArrayList도 같은 경우)
+* 내부 동작 면에서 차이는 Hashtable은 thread-safe, null 값을 키로 가질수 없음. HashMap은 반대
 
